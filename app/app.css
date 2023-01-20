@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Pokemon GB";
+    src: url("path/to/PokemonGB.ttf") format("truetype");
+}
+
+body {
+    background-image: url(../imgs/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Pokemon GB", sans-serif;
+}
+
+/* Add some styling for the header */
+header {
+    background-color: #364f6b;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: "Pokemon GB", sans-serif;
+}
+
+  
+/* Add some styling for the search box */
+.search-box {
+    width: 300px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.search-box button {
+    position: right;
+    top: 0;
+    right: 0;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-right: 12px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: #364f6b;
+    color: white;
+}
+
+#search-result {
+    text-align: center;
+}
+
+.search-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-table {
+    width: 300px;
+    margin: 10px auto;
+    position: relative;
+}
+
+#dropdown-list {
+    position: absolute;
+    width: 200px;
+    border: 0px solid gray;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 40px;
+    background-color: #f1f1f1;
+}
