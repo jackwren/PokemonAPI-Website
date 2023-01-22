@@ -81,6 +81,15 @@ searchInput.addEventListener("keyup", function () {
     });
 });
 
+dropdownList.addEventListener("change", function(){
+    // Get the selected option value
+    const selectedValue = dropdownList.options[dropdownList.selectedIndex].value;
+
+    // Assign the selected option value to the searchInput value
+    searchInput.value = selectedValue;
+})
+
+
 function displayList(items, label, tableBody) {
     const row = tableBody.insertRow();
     const cell = row.insertCell();
