@@ -4,7 +4,13 @@ function searchPokemon() {
 
     // Make an API call to the Pokemon API
     fetch(`https://pokeapi.co/api/v2/pokemon/${searchInput}`)
-        .then(response => response.json())
+        .then(response => {
+            // Check if response is OK
+            if (!response.ok) {
+                throw new Error('Pokemon not found');
+            }
+            return response.json();
+        })
         .then(data => {
             // Display the search result
             const searchResult = document.getElementById("search-result");
@@ -37,8 +43,12 @@ function searchPokemon() {
         })
         .catch(error => {
             console.log(error);
+            // Handle error: Display a message indicating Pokemon not found
+            const searchResult = document.getElementById("search-result");
+            searchResult.innerHTML = "<p>Pokemon not found</p>";
         });
 }
+
 
 const searchInput = document.getElementById("search-input");
 const searchResult = document.getElementById("search-result");
